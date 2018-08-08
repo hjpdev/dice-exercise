@@ -11,6 +11,12 @@ describe Dice do
     expect(subject.num_die).to eq 1
   end
 
+  it 'Allows you to change num_die' do
+    die = Dice.new
+    die.num_die = 3
+    expect(die.num_die).to eq 3
+  end
+
   it '#roll should return an integer to roll_results, between 1-6.' do
     expect(subject.roll[0].between?(1, 6) && subject.roll[0].is_a?(Integer)).to eq true
   end
