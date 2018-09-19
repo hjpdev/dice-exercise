@@ -37,3 +37,11 @@ describe Dice do
     expect(dice.roll).to eq [1, 2, 3]
   end
 end
+
+class MockBike
+  def working
+    true
+  end
+end
+
+let(:MockBike) { double :bike, :working => true}
